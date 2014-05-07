@@ -1,35 +1,73 @@
 <html>
 	<head>
+		<script src="jquery-1.11.0.min.js"></script>
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="index.css" rel="stylesheet"/>
 		<script src="bootstrap/js/bootstrap.min.js" type="text/javscript"></script>
 	</head>
 	<body>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".pic").hide();
+				$(".listimage").mouseover(function(event){
+					this.src = "newlist/" + this.id + "_hover.jpg";
+					var pics = $("." + this.id);
+					var curry = $(this).position().top;
+					for (var i = 0; i < pics.length; i++) {
+						var offset = curry - $(pics[i]).height()/3;
+						$(pics[i]).css("margin-top", offset);
+					}
+					$("."  + this.id).show();
+				});
+				$(".listimage").mouseout(function(){
+					this.src = "newlist/" + this.id + ".jpg";
+					$(".pic").hide();
+				});
+			});
+		</script>
 		<div class="row headers">
 			<div class="col-md-1">
-				<img class="link" src="new pics/list.jpg"/>
+				<img class="link" src="newpics/list.jpg"/>
 			</div>
 			<div class="col-md-1 ">
-				<img class="link about" src="new pics/about.jpg"/>
+				<img class="link about" src="newpics/about.jpg"/>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<img id="header" src="new pics/philly-header.jpg"/>
+					<img id="header" src="newpics/philly-header.jpg"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<img src="newlist/phillies.jpg"/>
-					<img src="newlist/picnic.jpg"/>
-					<img src="newlist/magicgardens.jpg"/>
-					<img src="newlist/acapella.jpg"/>
-					<img src="newlist/winquizzo.jpg"/>
-					<img src="newlist/italianmarket.jpg"/>
-					<img src="newlist/franklinsfountain.jpg"/>
-					<img src="newlist/happyhour.jpg"/>
-					<img src="newlist/frankfordhall.jpg"/>
+				<div class="col-md-2 col-md-offset-1">
+					<img class="pic phillies" src="newpics/p.jpg"/>
+					<img class="pic picnic" src="newpics/blanket.jpg"/>
+					<img class="pic magicgardens" src="newpics/mosaic.jpg"/>
+					<img class="pic acapella" src="newpics/mikeandmusicnotes.jpg"/>
+					<img class="pic franklinsfountain" src="newpics/icecreamcone.jpg"/>
+					<img class="pic happyhour" src="newpics/drinks.jpg"/>
+					<img class="pic frankfordhall" src="newpics/pretzel.jpg"/>
+				</div>
+				<div class="col-md-6">
+					<a><img id="phillies" class="listimage" src="newlist/phillies.jpg"/></a>
+					<a><img id="picnic" class="listimage" src="newlist/picnic.jpg"/></a>
+					<a><img id="magicgardens" class="listimage" src="newlist/magicgardens.jpg"/></a>
+					<a><img  id="acapella"class="listimage" src="newlist/acapella.jpg"/></a>
+					<a><img id="winquizzo" class="listimage" src="newlist/winquizzo.jpg"/></a>
+					<a><img id="italianmarket" class="listimage" src="newlist/italianmarket.jpg"/></a>
+					<a><img id="franklinsfountain" class="listimage" src="newlist/franklinsfountain.jpg"/></a>
+					<a><img id="happyhour" class="listimage" src="newlist/happyhour.jpg"/></a>
+					<a><img id="frankfordhall" class="listimage" src="newlist/frankfordhall.jpg"/></a>
+				</div>
+				<div class="col-md-2">
+					<img class="pic phillies" src="newpics/ballandstars.jpg"/>
+					<img class="pic picnic" src="newpics/singh.jpg"/>
+					<img class="pic magicgardens" src="newpics/bicycle.jpg"/>
+					<img class="pic winquizzo" src="newpics/qmarksandpencil.jpg"/>
+					<img class="pic franklinsfountain" src="newpics/sundae.jpg"/>
+					<img class="pic happyhour" src="newpics/flag.jpg"/>
+					<img class="pic frankfordhall" src="newpics/beer.jpg"/>
 				</div>
 			</div>
 	</body>
