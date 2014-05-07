@@ -1,0 +1,40 @@
+Lauren Shapiro
+
+Site Outline
+
+Philly Bucket List
+
+General Purpose:
+1. Provide a list of fun/interesting things to do around the Philly/Penn area
+2. Document outings during my last month of undergraduate college
+
+Graphic direction:
+collage, quirky, a little trompe l'oeil but still relatively clean
+
+
+Navigation:
+Index (the main list)
+About
+Items (one page per completed list item)
+Map
+
+Pages: ~10 (including individual item pages)
+
+Page content:
+
+Index:
+ navigation to about and more specific list descriptions
+ full-fledged list of items to check off with brief descriptions
+ separate graphic treatment of completed vs. noncompleted list items
+
+About:
+ short description about the project, it's goals, and how to navigate the site
+
+Items:
+ detailed documentation pages of completed list items, with written content describing interesting twists of events 
+ and graphic elements that relate to or specifically document the event
+ embedded google maps showing location of event
+
+Map: 
+ one large map of Philly indicating where each event takes place with graphic treatments to describe
+ when events took place in relation to each other, who was there, etc. map items link to item detail pages
